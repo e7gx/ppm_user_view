@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-import 'page/introduction_page.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase/firebase_options.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
-}
+import 'package:hello_world/page/introduction_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
