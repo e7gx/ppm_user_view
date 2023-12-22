@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../firebase/login_page.dart';
+import '../Auth/login_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:lottie/lottie.dart';

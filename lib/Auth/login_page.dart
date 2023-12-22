@@ -38,6 +38,7 @@ class LoginPage extends StatelessWidget {
                   prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(),
                 ),
+                keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 30.0),
               TextField(

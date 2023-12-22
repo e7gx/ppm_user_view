@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hello_world/styles/style.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
@@ -152,13 +153,13 @@ class _DetailsPageState extends State<DetailsPage> {
                 crossAxisAlignment: CrossAxisAlignment
                     .stretch, //موقع الزر و طوله في هذي الخاصيه
                 children: [
-                  _buildTextField(
+                  buildTextFieldText(
                       locationController, 'الموقع', 'أدخل اسم المعمل'),
                   const SizedBox(height: 30),
-                  _buildTextField(
-                      deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
+                  buildTextFieldNum(
+                      locationController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
                   const SizedBox(height: 30),
-                  _buildTextField(
+                  buildTextFieldText(
                       problemController, 'وصف المشكلة', 'أدخل وصف المشكلة'),
                   const SizedBox(height: 30),
                   SizedBox(
@@ -196,34 +197,6 @@ class _DetailsPageState extends State<DetailsPage> {
             ),
             const SizedBox(height: 10),
           ],
-        ),
-      ),
-    );
-  }
-
-  // سيتم إضافة وظيفة _buildTextField هنا
-
-  Widget _buildTextField(
-      TextEditingController controller, String label, String hint,
-      {int maxLines = 1}) {
-    return TextField(
-      controller: controller,
-      maxLines: maxLines,
-      decoration: InputDecoration(
-        border: InputBorder.none,
-        filled: true,
-        fillColor: Colors.grey[200],
-        labelText: label,
-        hintText: hint,
-        labelStyle: TextStyle(color: Colors.cyan[400]),
-        hintStyle: TextStyle(color: Colors.grey[400]),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.cyan[400]!, width: 4.0),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.cyan[400]!, width: 2.0),
         ),
       ),
     );

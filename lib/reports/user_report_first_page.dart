@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:hello_world/reports/user_report_details_page.dart';
+import 'package:hello_world/Reports/user_report_details_page.dart';
 
 class ReportProblemPage extends StatefulWidget {
   const ReportProblemPage({super.key});

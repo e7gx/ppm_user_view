@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'page/introduction_page.dart';
+import 'Page/introduction_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase/firebase_options.dart';
+import 'Firebase/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

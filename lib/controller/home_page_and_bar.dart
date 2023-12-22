@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/QrCode/qr_scannerpage.dart';
+import 'package:hello_world/code/qr_scannerpage.dart';
 import 'package:hello_world/reports/user_report_first_page.dart';
 import 'package:hello_world/page/main_page.dart';
 import 'package:hello_world/data/user_data.dart';

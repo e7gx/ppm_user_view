@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/firebase/login_page.dart';
+import 'package:hello_world/Auth/login_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
