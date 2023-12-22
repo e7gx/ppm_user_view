@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hello_world/controller/home_page_and_bar.dart';
 import 'signup_page.dart';
 import 'package:lottie/lottie.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -64,9 +65,9 @@ class LoginPage extends StatelessWidget {
                           title: const Text(
                             'خطأ في الإدخال',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.cyan),
+                                color: Colors.black54),
                           ),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -77,7 +78,9 @@ class LoginPage extends StatelessWidget {
                               const Text(
                                 '       يرجى ملء كل من حقول   \n    البريد الإلكتروني وكلمة المرور   ',
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black54),
                               ),
                             ],
                           ),
@@ -89,7 +92,9 @@ class LoginPage extends StatelessWidget {
                               child: const Text(
                                 'موافق',
                                 style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54),
                               ),
                             ),
                           ],
@@ -132,7 +137,7 @@ class LoginPage extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.cyan),
+                                color: Colors.black54),
                           ),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -150,12 +155,21 @@ class LoginPage extends StatelessWidget {
                           actions: [
                             TextButton(
                               onPressed: () {
+                                Fluttertoast.showToast(
+                                    msg: "كلمة السر غير صحيحة",
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.CENTER,
+                                    timeInSecForIosWeb: 1,
+                                    textColor: Colors.white,
+                                    fontSize: 16.0);
                                 Navigator.of(context).pop();
                               },
                               child: const Text(
                                 'موافق',
                                 style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54),
                               ),
                             ),
                           ],

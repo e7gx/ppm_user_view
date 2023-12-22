@@ -58,12 +58,13 @@ class _DetailsPageState extends State<DetailsPage> {
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic)),
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black54)),
             actions: <Widget>[
               TextButton(
                 child: const Text('حسنا',
                     style: TextStyle(
-                        color: Colors.cyan,
+                        color: Colors.black54,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic)),
