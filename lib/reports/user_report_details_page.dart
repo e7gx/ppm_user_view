@@ -158,7 +158,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       locationController, 'الموقع', 'أدخل اسم المعمل'),
                   const SizedBox(height: 30),
                   buildTextFieldNum(
-                      locationController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
+                      deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
                   const SizedBox(height: 30),
                   buildTextFieldText(
                       problemController, 'وصف المشكلة', 'أدخل وصف المشكلة'),

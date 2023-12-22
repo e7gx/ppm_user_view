@@ -44,11 +44,16 @@ class _QRScannerPageState extends State<QRScannerPage> {
                 'animation/like1.json',
                 height: 300,
               ),
+              contentTextStyle:
+                  const TextStyle(color: Colors.black, fontSize: 15),
               backgroundColor: Colors.white,
-              content: Text('البيانات الممسوحة: ${scanData.code}'),
+              content: Text('Device Information ' '\n\n\n' ' ${scanData.code}'),
               actions: <Widget>[
                 TextButton(
-                  child: const Text('حسنا'),
+                  child: const Text(
+                    'حسنا',
+                    style: TextStyle(color: Colors.cyan, fontSize: 18),
+                  ),
                   onPressed: () {
                     Navigator.of(context).pop();
                     controller
