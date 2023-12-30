@@ -12,7 +12,6 @@ class MainPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // هنا يمكنك إضافة الصورة-*
             Lottie.asset('animation/ppmana.json', height: 300, width: 300),
             const SizedBox(height: 20),
             const Text('أهلا و سهلا بك',
