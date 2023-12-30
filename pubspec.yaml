@@ -46,6 +46,6 @@ flutter:
     - assets/images/
     - assets/animation/
     - assets/animation/ppmana.json
-    - assets/json/
+    - assets/json/ptm-chat-bot-vgsm-ceb8f04ce7e5.json
 
   uses-material-design: true
