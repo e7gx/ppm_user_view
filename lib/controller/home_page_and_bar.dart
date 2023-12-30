@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/code/qr_scannerpage.dart';
 import 'package:hello_world/reports/user_report_first_page.dart';
-import 'package:hello_world/page/main_page.dart';
+import 'package:hello_world/Page/main_page.dart';
 import 'package:hello_world/data/user_data.dart';
 import 'package:hello_world/Settings/settings_page.dart';
 
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         automaticallyImplyLeading: false,
         leading: PopupMenuButton<String>(
           icon: const Icon(
-            Icons.more_vert,
+            Icons.menu,
             color: Color.fromARGB(255, 255, 255, 255),
           ), // هذه هي الأيقونة التي ستظهر
           onSelected: (String result) {
