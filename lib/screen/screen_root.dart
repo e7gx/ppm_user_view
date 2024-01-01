@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: false,
         primarySwatch: Colors.cyan,
+        canvasColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const OnBoardingPage(),
