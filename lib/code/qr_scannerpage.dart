@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:lottie/lottie.dart';
+import 'package:hello_world/Reports/user_report_details_page.dart';
 
 class QRScannerPage extends StatefulWidget {
   const QRScannerPage({super.key});
@@ -50,9 +51,28 @@ class _QRScannerPageState extends State<QRScannerPage> {
               content: Text('Device Information ' '\n\n\n' ' ${scanData.code}'),
               actions: <Widget>[
                 TextButton(
-                  child: const Text(
-                    'حسنا',
-                    style: TextStyle(color: Colors.cyan, fontSize: 18),
+                  child: const Center(
+                    child: Text(
+                      'تقديم بلاغ',
+                      textAlign: TextAlign.right,
+                      style: TextStyle(color: Colors.cyan, fontSize: 18),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DetailsPage()),
+                    );
+                  },
+                ),
+                TextButton(
+                  child: const Center(
+                    child: Text(
+                      'اهمال',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(color: Colors.cyan, fontSize: 18),
+                    ),
                   ),
                   onPressed: () {
                     Navigator.of(context).pop();

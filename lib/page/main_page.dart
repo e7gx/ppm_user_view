@@ -29,7 +29,7 @@ class MainPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black54)),
+                      color: Color.fromARGB(183, 1, 19, 29))),
               const SizedBox(height: 30),
             ],
           ),

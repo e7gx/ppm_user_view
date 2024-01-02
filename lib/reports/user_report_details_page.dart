@@ -112,6 +112,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     problemController.clear();
                   });
                   Navigator.of(context).pop();
+                  Navigator.of(context).pop();
                 },
               ),
             ],
