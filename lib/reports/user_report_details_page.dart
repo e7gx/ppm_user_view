@@ -132,72 +132,97 @@ class _DetailsPageState extends State<DetailsPage> {
             style: TextStyle(
                 color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
           ),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 105, 142, 255),
+                    Color(0xFF00CCFF),
+                  ],
+                  begin: FractionalOffset(0.0, 0.0),
+                  end: FractionalOffset(1.0, 0.0),
+                  stops: [0.0, 1.0],
+                  tileMode: TileMode.clamp),
+            ),
+          ),
           centerTitle: true,
           iconTheme: const IconThemeData(color: Colors.white)),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Lottie.asset(
-                'animation/p2p.json',
-                fit: BoxFit.contain,
-                height: 300,
-                width: double.infinity,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 255, 255, 255),
+              Color.fromARGB(255, 169, 223, 255),
+            ],
+            begin: Alignment.topRight,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 20),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Lottie.asset(
+                  'animation/p2p.json',
+                  fit: BoxFit.contain,
+                  height: 300,
+                  width: double.infinity,
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment
-                    .stretch, //موقع الزر و طوله في هذي الخاصيه
-                children: [
-                  buildTextFieldText(
-                      locationController, 'الموقع', 'أدخل اسم المعمل'),
-                  const SizedBox(height: 30),
-                  buildTextFieldNum(
-                      deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
-                  const SizedBox(height: 30),
-                  buildTextFieldText(
-                      problemController, 'وصف المشكلة', 'أدخل وصف المشكلة'),
-                  const SizedBox(height: 30),
-                  SizedBox(
-                    width: 150,
-                    child: ElevatedButton(
-                      onPressed: () => _submitReport(
-                        context,
-                      ),
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(
-                          const EdgeInsets.symmetric(
-                            vertical: 10,
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment
+                      .stretch, //موقع الزر و طوله في هذي الخاصيه
+                  children: [
+                    buildTextFieldText(
+                        locationController, 'الموقع', 'أدخل اسم المعمل'),
+                    const SizedBox(height: 30),
+                    buildTextFieldNum(
+                        deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
+                    const SizedBox(height: 30),
+                    buildTextFieldText(
+                        problemController, 'وصف المشكلة', 'أدخل وصف المشكلة'),
+                    const SizedBox(height: 30),
+                    SizedBox(
+                      width: 150,
+                      child: ElevatedButton(
+                        onPressed: () => _submitReport(
+                          context,
+                        ),
+                        style: ButtonStyle(
+                          padding: MaterialStateProperty.all(
+                            const EdgeInsets.symmetric(
+                              vertical: 10,
+                            ),
+                          ),
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 1, 187, 234)),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                           ),
                         ),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.cyan[400]),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                        child: const Text(
+                          'إرسال',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
-                        ),
-                      ),
-                      child: const Text(
-                        'إرسال',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-          ],
+              const SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );
