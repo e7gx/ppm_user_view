@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 20),
               ListTile(
                 title: const Text(
-                  'الإعدادات',
+                  'البيانات الشخصية',
                   style: TextStyle(
                     color: Color.fromARGB(195, 37, 37, 37),
                     fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 20),
               ListTile(
                 title: const Text(
-                  'البيانات الشخصية',
+                  'الإعدادات',
                   style: TextStyle(
                     color: Color.fromARGB(195, 37, 37, 37),
                     fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
