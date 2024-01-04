@@ -33,25 +33,37 @@ class MyDataPage extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            UserAvatarInfoCard(
-              imageUrl: 'images/emp.jpeg',
-              fullName: userData.fullName,
-              jobTitle: userData.position,
-            ),
-            UserDetailTile(
-              title: 'اسم المستخدم',
-              value: userData.username,
-              icon: Icons.person_2_rounded,
-            ),
-            UserDetailTile(
-              title: 'البريد الإلكتروني',
-              value: userData.email,
-              icon: Icons.email,
-            ),
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 255, 255, 255),
+              Color.fromARGB(255, 169, 223, 255),
+            ],
+            begin: Alignment.topRight,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              UserAvatarInfoCard(
+                imageUrl: 'images/emp.jpeg',
+                fullName: userData.fullName,
+                jobTitle: userData.position,
+              ),
+              UserDetailTile(
+                title: 'اسم المستخدم',
+                value: userData.username,
+                icon: Icons.person_2_rounded,
+              ),
+              UserDetailTile(
+                title: 'البريد الإلكتروني',
+                value: userData.email,
+                icon: Icons.email,
+              ),
+            ],
+          ),
         ),
       ),
     );

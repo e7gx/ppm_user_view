@@ -25,11 +25,14 @@ class MainPage extends StatelessWidget {
             children: [
               Lottie.asset('animation/ppmana.json', height: 300, width: 300),
               const SizedBox(height: 20),
-              const Text('أهلا و سهلا بك',
-                  style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(183, 1, 19, 29))),
+              const Text(
+                'أهلا و سهلا بك',
+                style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 3, 88, 154),
+                ),
+              ),
               const SizedBox(height: 30),
             ],
           ),

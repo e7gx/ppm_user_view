@@ -31,7 +31,7 @@ class _DetailsPageState extends State<DetailsPage> {
         .then((documentReference) {
       // ignore: avoid_print
       print('Document added with ID: ${documentReference.id}');
-      // هنا يمكنك أيضًا إغلاق نافذة الحوار الحالية إذا كانت مفتوحة
+
       Navigator.of(context).pop();
     }).catchError((e) {
       // ignore: avoid_print
@@ -54,17 +54,18 @@ class _DetailsPageState extends State<DetailsPage> {
               height: 290,
             ),
             content: const Text(
-                '      يرجى تعبئة جميع الحقول\n          لنتمكن من مساعدتك', ////////////////////////jjjjj
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black54)),
+              '      يرجى تعبئة جميع الحقول\n          لنتمكن من مساعدتك', ////////////////////////jjjjj
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black),
+            ),
             actions: <Widget>[
               TextButton(
                 child: const Text('حسنا',
                     style: TextStyle(
-                        color: Colors.black54,
+                        color: Colors.cyan,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic)),
@@ -101,9 +102,13 @@ class _DetailsPageState extends State<DetailsPage> {
             ),
             actions: <Widget>[
               TextButton(
-                child: const Text('حسنا',
-                    style: TextStyle(
-                        color: Colors.cyan, fontStyle: FontStyle.italic)),
+                child: const Text(
+                  'حسنا',
+                  style: TextStyle(
+                    color: Colors.cyan,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
                 onPressed: () {
                   // هنا تم إضافة تعليمات لمسح النص من الـ Controllers
                   setState(() {
@@ -201,7 +206,8 @@ class _DetailsPageState extends State<DetailsPage> {
                             ),
                           ),
                           backgroundColor: MaterialStateProperty.all(
-                              const Color.fromARGB(255, 1, 187, 234)),
+                            const Color.fromARGB(255, 31, 108, 232),
+                          ),
                           shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),

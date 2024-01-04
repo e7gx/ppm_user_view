@@ -12,15 +12,17 @@ Widget buildTextFieldText(
       fillColor: Colors.grey[200],
       labelText: label,
       hintText: hint,
-      labelStyle: TextStyle(color: Colors.cyan[400]),
+      labelStyle: const TextStyle(color: Color.fromARGB(255, 31, 108, 232)),
       hintStyle: TextStyle(color: Colors.grey[400]),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.cyan[400]!, width: 4.0),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 4.0),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.cyan[400]!, width: 2.0),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 2.0),
       ),
     ),
     keyboardType: TextInputType.text,
@@ -39,15 +41,17 @@ Widget buildTextFieldNum(
       fillColor: Colors.grey[200],
       labelText: label,
       hintText: hint,
-      labelStyle: TextStyle(color: Colors.cyan[400]),
+      labelStyle: const TextStyle(color: Color.fromARGB(255, 31, 108, 232)),
       hintStyle: TextStyle(color: Colors.grey[400]),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.cyan[400]!, width: 4.0),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 4.0),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.cyan[400]!, width: 2.0),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 2.0),
       ),
     ),
     keyboardType: TextInputType.number,
