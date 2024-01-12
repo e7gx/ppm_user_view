@@ -4,6 +4,7 @@ import 'package:hello_world/reports/user_report_first_page.dart';
 import 'package:hello_world/Page/main_page.dart';
 import 'package:hello_world/data/user_data.dart';
 import 'package:hello_world/Settings/settings_page.dart';
+import 'package:hello_world/Controller/how_are_we.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -113,6 +114,26 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 20),
               ListTile(
                 title: const Text(
+                  'طرق التواصل',
+                  style: TextStyle(
+                    color: Color.fromARGB(195, 37, 37, 37),
+                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onTap: () {
+                  // Update the state of the app
+
+                  // Then close the drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HowAreWe()),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+              ListTile(
+                title: const Text(
                   'الإعدادات',
                   style: TextStyle(
                     color: Color.fromARGB(195, 37, 37, 37),
@@ -139,8 +160,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'الرئيسية',
+            icon: Icon(Icons.chat_outlined),
+            label: 'المحادثة',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.report),
