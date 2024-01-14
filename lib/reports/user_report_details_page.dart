@@ -54,7 +54,7 @@ class _DetailsPageState extends State<DetailsPage> {
               height: 290,
             ),
             content: const Text(
-              '      يرجى تعبئة جميع الحقول\n          لنتمكن من مساعدتك', ////////////////////////jjjjj
+              '      يرجى تعبئة جميع الحقول\n          لنتمكن من مساعدتك',
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -173,7 +173,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 child: Lottie.asset(
                   'animation/p2p.json',
                   fit: BoxFit.contain,
-                  height: 300,
+                  height: 160,
                   width: double.infinity,
                 ),
               ),
@@ -184,12 +184,23 @@ class _DetailsPageState extends State<DetailsPage> {
                   crossAxisAlignment: CrossAxisAlignment
                       .stretch, //موقع الزر و طوله في هذي الخاصيه
                   children: [
+                    const Center(
+                      child: Text(
+                        'الرجاء ملاء جميع الحقول ب بيانات صحيحة لنتمكن من مساعدتكم في اسرع وقت',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
                     buildTextFieldText(
                         locationController, 'الموقع', 'أدخل اسم المعمل'),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 20),
                     buildTextFieldNum(
                         deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 20),
                     buildTextFieldText(
                         problemController, 'وصف المشكلة', 'أدخل وصف المشكلة'),
                     const SizedBox(height: 30),

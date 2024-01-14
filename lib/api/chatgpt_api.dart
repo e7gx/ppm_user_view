@@ -1,1 +1,3 @@
-class APIKey {}
+class APIKey {
+  static const apikey = "";
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Auth/login_page.dart';
 import 'package:hello_world/code/qr_scannerpage.dart';
 import 'package:hello_world/reports/user_report_first_page.dart';
 import 'package:hello_world/Page/main_page.dart';
@@ -61,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             gradient: LinearGradient(
               colors: [
                 Color.fromARGB(117, 255, 255, 255),
-                Color.fromARGB(185, 0, 204, 255),
+                Color.fromARGB(248, 255, 255, 255),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -91,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               ListTile(
                 title: const Text(
                   'البيانات الشخصية',
@@ -110,6 +111,11 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => MyDataPage()),
                   );
                 },
+                leading: Icon(
+                  Icons.supervised_user_circle,
+                  size: 30.0,
+                  color: Colors.blue[800],
+                ),
               ),
               const SizedBox(height: 20),
               ListTile(
@@ -121,13 +127,18 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                leading: Icon(
+                  Icons.help_outline,
+                  size: 30.0,
+                  color: Colors.blue[800],
+                ),
                 onTap: () {
                   // Update the state of the app
 
                   // Then close the drawer
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HowAreWe()),
+                    MaterialPageRoute(builder: (context) => const HowAreWe()),
                   );
                 },
               ),
@@ -141,6 +152,11 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                leading: Icon(
+                  Icons.settings,
+                  size: 30.0,
+                  color: Colors.blue[800],
+                ),
                 onTap: () {
                   // Update the state of the app
 
@@ -151,6 +167,42 @@ class _HomePageState extends State<HomePage> {
                         builder: (context) => const SettingsPage()),
                   );
                 },
+              ),
+              const SizedBox(
+                height: 238,
+              ),
+              const Divider(
+                endIndent: BorderSide.strokeAlignCenter,
+                color: Colors.blue,
+                height: 5,
+              ),
+              ListTile(
+                title: const Text(
+                  'تسجيل خروج',
+                  style: TextStyle(
+                    color: Color.fromARGB(195, 37, 37, 37),
+                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                leading: Icon(
+                  Icons.logout,
+                  size: 30.0,
+                  color: Colors.blue[800],
+                ),
+                onTap: () {
+                  // Update the state of the app
+
+                  // Then close the drawer
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+              ),
+              const Divider(
+                height: 5,
+                color: Colors.white,
               ),
             ],
           ),
