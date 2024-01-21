@@ -19,10 +19,10 @@ class LoginPage extends StatelessWidget {
           child: Text(
             "تسجيل الدخول",
             style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontFamily: 'Cario'),
           ),
         ),
         centerTitle: true,
@@ -65,9 +65,10 @@ class LoginPage extends StatelessWidget {
                   decoration: const InputDecoration(
                     labelText: 'البريد الإلكتروني',
                     labelStyle: TextStyle(
+                        fontFamily: 'Cario',
                         color: Colors.cyan), // Cyan color for label text
-                    prefixIcon: Icon(Icons.email_outlined,
-                        color: Colors.cyan), // Cyan color for icon
+                    prefixIcon: Icon(Icons.email_outlined, color: Colors.cyan),
+                    // Cyan color for icon
 
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -90,6 +91,7 @@ class LoginPage extends StatelessWidget {
                   decoration: const InputDecoration(
                     labelText: 'كلمة المرور',
                     labelStyle: TextStyle(
+                        fontFamily: 'Cario',
                         color: Colors.cyan), // Cyan color for label text
                     prefixIcon: Icon(Icons.lock_outline,
                         color: Colors.cyan), // Cyan color for icon
@@ -240,7 +242,11 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: const Text(
                     'تسجيل الدخول',
-                    style: TextStyle(fontSize: 17.0, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.white,
+                        fontFamily: 'Cario',
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(height: 30.0),
@@ -256,9 +262,15 @@ class LoginPage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: const Text('سجل الآن'),
+                      child: const Text(
+                        'سجل الآن',
+                        style: TextStyle(fontFamily: 'Cario'),
+                      ),
                     ),
-                    const Text('ليس لديك حساب؟'),
+                    const Text(
+                      'ليس لديك حساب؟',
+                      style: TextStyle(fontFamily: 'Cario'),
+                    ),
                   ],
                 ),
               ],

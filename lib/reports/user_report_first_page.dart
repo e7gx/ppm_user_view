@@ -43,7 +43,8 @@ class _ReportProblemPageState extends State<ReportProblemPage> {
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          color: Colors.black54),
+                          color: Colors.black54,
+                          fontFamily: 'Cario'),
                     ),
                   ),
                   const SizedBox(height: 50),
@@ -72,7 +73,7 @@ class _ReportProblemPageState extends State<ReportProblemPage> {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontStyle: FontStyle.italic),
+                          fontFamily: 'Cario'),
                     ),
                   ),
                 ],

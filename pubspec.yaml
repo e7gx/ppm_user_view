@@ -46,4 +46,9 @@ flutter:
     - assets/animation/ppmana.json
     - assets/json/
 
+  fonts: 
+    - family: Cario
+      fonts:
+        - asset: assets/font/Cairo-Regular.ttf
+
   uses-material-design: true

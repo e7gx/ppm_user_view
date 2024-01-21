@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: false,
+        fontFamily: '',
         primarySwatch: Colors.cyan,
         canvasColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,

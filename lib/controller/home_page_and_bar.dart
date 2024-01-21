@@ -32,10 +32,10 @@ class _HomePageState extends State<HomePage> {
           textAlign: TextAlign.center,
           '       الصفحة الرئيسية',
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 24, //  تغيير هذه القيمة لتكون الحجم
-            fontWeight: FontWeight.bold,
-          ),
+              color: Colors.white,
+              fontSize: 24, //  تغيير هذه القيمة لتكون الحجم
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Cario'),
         ),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -86,9 +86,10 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     '           PTM\n To Make IT Easy',
                     style: TextStyle(
-                        fontSize: 34,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+                      fontSize: 34,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -97,10 +98,10 @@ class _HomePageState extends State<HomePage> {
                 title: const Text(
                   'البيانات الشخصية',
                   style: TextStyle(
-                    color: Color.fromARGB(195, 37, 37, 37),
-                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Color.fromARGB(195, 37, 37, 37),
+                      fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cario'),
                 ),
                 onTap: () {
                   // Update the state of the app
@@ -122,10 +123,10 @@ class _HomePageState extends State<HomePage> {
                 title: const Text(
                   'طرق التواصل',
                   style: TextStyle(
-                    color: Color.fromARGB(195, 37, 37, 37),
-                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Color.fromARGB(195, 37, 37, 37),
+                      fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cario'),
                 ),
                 leading: Icon(
                   Icons.help_outline,
@@ -147,10 +148,10 @@ class _HomePageState extends State<HomePage> {
                 title: const Text(
                   'الإعدادات',
                   style: TextStyle(
-                    color: Color.fromARGB(195, 37, 37, 37),
-                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Color.fromARGB(195, 37, 37, 37),
+                      fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cario'),
                 ),
                 leading: Icon(
                   Icons.settings,
@@ -180,10 +181,10 @@ class _HomePageState extends State<HomePage> {
                 title: const Text(
                   'تسجيل خروج',
                   style: TextStyle(
-                    color: Color.fromARGB(195, 37, 37, 37),
-                    fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Color.fromARGB(195, 37, 37, 37),
+                      fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cario'),
                 ),
                 leading: Icon(
                   Icons.logout,
@@ -214,15 +215,17 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_outlined),
             label: 'المحادثة',
+            activeIcon: Icon(Icons.auto_fix_high_outlined),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.report),
             label: 'البلاغات',
+            activeIcon: Icon(Icons.report_gmailerrorred),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.qr_code),
-            label: 'QR Scanner',
-          ),
+              icon: Icon(Icons.qr_code),
+              label: 'QR Scanner',
+              activeIcon: Icon(Icons.video_call)),
         ],
         currentIndex: _currentIndex,
         onTap: (index) {

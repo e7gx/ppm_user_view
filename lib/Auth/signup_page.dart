@@ -96,10 +96,13 @@ class _SignUpPageState extends State<SignUpPage> {
         title: const Text(
           "تسجيل حساب جديد",
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontFamily: 'Cario'),
         ),
         centerTitle: true,
-        toolbarHeight: 50,
+        toolbarHeight: 60,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(500),
@@ -141,6 +144,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: const InputDecoration(
                     labelText: 'البريد الإلكتروني',
                     labelStyle: TextStyle(
+                        fontFamily: 'Cario',
                         color: Colors.cyan), // Cyan color for label text
                     prefixIcon: Icon(Icons.email_outlined,
                         color: Colors.cyan), // Cyan color for icon
@@ -167,6 +171,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: const InputDecoration(
                     labelText: 'كلمة المرور',
                     labelStyle: TextStyle(
+                        fontFamily: 'Cario',
                         color: Colors.cyan), // Cyan color for label text
                     prefixIcon: Icon(Icons.lock_outline,
                         color: Colors.cyan), // Cyan color for icon
@@ -198,9 +203,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: const Text(
                     ' تسجيل جديد ',
                     style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.white,
-                    ),
+                        fontFamily: 'Cario',
+                        fontSize: 16.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(height: 90.0),

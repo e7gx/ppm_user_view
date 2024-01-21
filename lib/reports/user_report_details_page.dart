@@ -56,10 +56,11 @@ class _DetailsPageState extends State<DetailsPage> {
             content: const Text(
               '      يرجى تعبئة جميع الحقول\n          لنتمكن من مساعدتك',
               style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Colors.black,
+              ),
             ),
             actions: <Widget>[
               TextButton(
@@ -136,7 +137,10 @@ class _DetailsPageState extends State<DetailsPage> {
           title: const Text(
             "تقديم بلاغ",
             style: TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Cario'),
           ),
           flexibleSpace: Container(
             decoration: const BoxDecoration(
@@ -191,12 +195,16 @@ class _DetailsPageState extends State<DetailsPage> {
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black54),
+                            color: Colors.black54,
+                            fontFamily: 'Cario'),
                       ),
                     ),
                     const SizedBox(height: 20),
                     buildTextFieldText(
-                        locationController, 'الموقع', 'أدخل اسم المعمل'),
+                      locationController,
+                      'الموقع',
+                      'أدخل اسم المعمل',
+                    ),
                     const SizedBox(height: 20),
                     buildTextFieldNum(
                         deviceController, 'رقم الجهاز', 'أدخل رقم الجهاز'),
@@ -228,10 +236,10 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: const Text(
                           'إرسال',
                           style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontFamily: 'Cario'),
                         ),
                       ),
                     ),
