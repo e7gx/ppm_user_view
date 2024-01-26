@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/Auth/login_page.dart';
 import 'package:hello_world/code/qr_scannerpage.dart';
 import 'package:hello_world/reports/user_report_first_page.dart';
-import 'package:hello_world/Page/main_page.dart';
+import 'package:hello_world/Page/chat_main_page.dart';
 import 'package:hello_world/data/user_data.dart';
 import 'package:hello_world/Settings/settings_page.dart';
 import 'package:hello_world/Controller/how_are_we.dart';

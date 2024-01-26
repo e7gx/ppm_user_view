@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:hello_world/api/chatgpt_api.dart';
 import 'package:http/http.dart' as http;
+// import 'package:hello_world/.env';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -40,7 +41,7 @@ class _MainPageState extends State<MainPage> {
       "messages": [
         {"role": "user", "content": message}
       ],
-      "max_tokens": 100,
+      "max_tokens": 250,
     };
 
     try {
