@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:hello_world/api/chatgpt_api.dart';
+// import 'package:hello_world/api/chatgpt_api.dart';
 import 'package:http/http.dart' as http;
-// import 'package:hello_world/.env';
+import 'package:hello_world/.env';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
