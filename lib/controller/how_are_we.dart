@@ -10,7 +10,10 @@ class HowAreWe extends StatelessWidget {
       appBar: AppBar(
         title: const Text('         طرق التواصل'),
         titleTextStyle: const TextStyle(
-            color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Cario'),
         iconTheme: const IconThemeData(color: Colors.white),
         flexibleSpace: Container(
           decoration: const BoxDecoration(

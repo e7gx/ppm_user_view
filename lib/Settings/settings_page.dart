@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/Auth/login_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -8,8 +7,14 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('           الإعدادات'),
-        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 24),
+        title: const Text(
+          '           الإعدادات',
+        ),
+        titleTextStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontFamily: 'Cario',
+            fontWeight: FontWeight.bold),
         iconTheme: const IconThemeData(color: Colors.white),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -41,7 +46,11 @@ class SettingsPage extends StatelessWidget {
             // قائمة الإشعارات
             ListTile(
               leading: const Icon(Icons.notifications), // أيقونة الإشعارات
-              title: const Text('الإشعارات'),
+              title: const Text(
+                'الإشعارات',
+                style: TextStyle(
+                    fontFamily: 'Cario', fontSize: 17, color: Colors.black45),
+              ),
               trailing: const Icon(Icons
                   .arrow_forward_ios), // أيقونة الانتقال للصفحة الخاصة بالإشعارات إذا كان هناك
               onTap: () {
@@ -53,7 +62,11 @@ class SettingsPage extends StatelessWidget {
             // قائمة تعديل كلمة المرور
             ListTile(
               leading: const Icon(Icons.lock), // أيقونة تعديل كلمة المرور
-              title: const Text('تعديل كلمة المرور'),
+              title: const Text(
+                'تعديل كلمة المرور',
+                style: TextStyle(
+                    fontFamily: 'Cario', fontSize: 17, color: Colors.black45),
+              ),
               trailing: const Icon(Icons
                   .arrow_forward_ios), // أيقونة الانتقال لصفحة تعديل كلمة المرور إذا كان هناك
               onTap: () {
@@ -65,7 +78,11 @@ class SettingsPage extends StatelessWidget {
             // قائمة اللغة
             ListTile(
               leading: const Icon(Icons.language), // أيقونة اللغة
-              title: const Text('اللغة'),
+              title: const Text(
+                'اللغة',
+                style: TextStyle(
+                    fontFamily: 'Cario', fontSize: 17, color: Colors.black45),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
                 // قم بإضافة المنطق الخاص بصفحة تغيير اللغة هنا
@@ -76,28 +93,17 @@ class SettingsPage extends StatelessWidget {
             // قائمة التقييم وتعديل الصور
             ListTile(
               leading: const Icon(Icons.rate_review), // أيقونة التقييم
-              title: const Text('التقييم وتعديل الصور'),
+              title: const Text(
+                'التقييم وتعديل الصور',
+                style: TextStyle(
+                    fontFamily: 'Cario', fontSize: 17, color: Colors.black45),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
                 // قم بإضافة المنطق الخاص بصفحة التقييم وتعديل الصور هنا
               },
             ),
             const Divider(),
-
-            // قائمة تسجيل الخروج
-            ListTile(
-              leading: const Icon(Icons.logout), // أيقونة تسجيل الخروج
-              title: const Text('تسجيل الخروج'),
-              onTap: () {
-                // قم بإضافة المنطق الخاص بتسجيل الخروج هنا
-                // يجب توجيه المستخدم إلى صفحة تسجيل الدخول (LoginPage)
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => LoginPage(),
-                  ),
-                );
-              },
-            ),
           ],
         ),
       ),

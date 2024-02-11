@@ -35,7 +35,7 @@ class _ReportProblemPageState extends State<ReportProblemPage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   // إضافة الصورة هنا
-                  Lottie.asset('animation/p2p.json',
+                  Lottie.asset('assets/animation/p2p.json',
                       height: 320), // تعديل المسار المناسب للصورة
                   const Center(
                     child: Text(

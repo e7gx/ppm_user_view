@@ -17,7 +17,11 @@ class MyDataPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('          بيانات المستخدم '),
-        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 24),
+        titleTextStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontFamily: 'Cario',
+            fontWeight: FontWeight.bold),
         iconTheme: const IconThemeData(color: Colors.white),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -33,37 +37,25 @@ class MyDataPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 255, 255, 255),
-              Color.fromARGB(255, 169, 223, 255),
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              UserAvatarInfoCard(
-                imageUrl: 'images/emp.jpeg',
-                fullName: userData.fullName,
-                jobTitle: userData.position,
-              ),
-              UserDetailTile(
-                title: 'اسم المستخدم',
-                value: userData.username,
-                icon: Icons.person_2_rounded,
-              ),
-              UserDetailTile(
-                title: 'البريد الإلكتروني',
-                value: userData.email,
-                icon: Icons.email,
-              ),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            UserAvatarInfoCard(
+              imageUrl: 'assets/images/emp.jpeg',
+              fullName: userData.fullName,
+              jobTitle: userData.position,
+            ),
+            UserDetailTile(
+              title: 'اسم المستخدم',
+              value: userData.username,
+              icon: Icons.person_2_rounded,
+            ),
+            UserDetailTile(
+              title: 'البريد الإلكتروني',
+              value: userData.email,
+              icon: Icons.email,
+            ),
+          ],
         ),
       ),
     );
@@ -124,20 +116,26 @@ class UserDetailTile extends StatelessWidget {
   final String title;
   final String value;
   final IconData? icon;
+  final TextStyle? style;
 
-  const UserDetailTile({
-    super.key,
-    required this.title,
-    required this.value,
-    this.icon,
-  });
+  const UserDetailTile(
+      {super.key,
+      required this.title,
+      required this.value,
+      this.icon,
+      this.style});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: icon != null ? Icon(icon) : null,
-      title: Text(title),
+      title: Text(
+        title,
+        style: const TextStyle(
+            fontSize: 18, fontFamily: 'Cario', fontWeight: FontWeight.bold),
+      ),
       subtitle: Text(value),
+      textColor: Colors.black54,
     );
   }
 }

@@ -6,6 +6,7 @@ Widget buildTextFieldText(
   return TextField(
     controller: controller,
     maxLines: maxLines,
+    maxLength: 50,
     decoration: InputDecoration(
       border: InputBorder.none,
       filled: true,
@@ -13,7 +14,37 @@ Widget buildTextFieldText(
       labelText: label,
       hintText: hint,
       labelStyle: const TextStyle(color: Color.fromARGB(255, 31, 108, 232)),
-      hintStyle: TextStyle(color: Colors.grey[400]),
+      hintStyle: TextStyle(fontFamily: 'Cario', color: Colors.grey[400]),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 4.0),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: const BorderSide(
+            color: Color.fromARGB(255, 31, 108, 232), width: 2.0),
+      ),
+    ),
+    keyboardType: TextInputType.text,
+  );
+}
+
+Widget buildTextFieldLocation(
+    TextEditingController controller, String label, String hint,
+    {int maxLines = 1}) {
+  return TextField(
+    controller: controller,
+    maxLines: maxLines,
+    maxLength: 10,
+    decoration: InputDecoration(
+      border: InputBorder.none,
+      filled: true,
+      fillColor: Colors.grey[200],
+      labelText: label,
+      hintText: hint,
+      labelStyle: const TextStyle(color: Color.fromARGB(255, 31, 108, 232)),
+      hintStyle: TextStyle(fontFamily: 'Cario', color: Colors.grey[400]),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
         borderSide: const BorderSide(
@@ -35,6 +66,7 @@ Widget buildTextFieldNum(
   return TextField(
     controller: controller,
     maxLines: maxLines,
+    maxLength: 10,
     decoration: InputDecoration(
       border: InputBorder.none,
       filled: true,
@@ -42,7 +74,7 @@ Widget buildTextFieldNum(
       labelText: label,
       hintText: hint,
       labelStyle: const TextStyle(color: Color.fromARGB(255, 31, 108, 232)),
-      hintStyle: TextStyle(color: Colors.grey[400]),
+      hintStyle: TextStyle(fontFamily: 'Cario', color: Colors.grey[400]),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
         borderSide: const BorderSide(

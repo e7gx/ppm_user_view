@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hello_world/styles/style.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
@@ -50,7 +51,7 @@ class _DetailsPageState extends State<DetailsPage> {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             title: Lottie.asset(
-              'animation/WOR.json',
+              'assets/animation/WOR.json',
               height: 290,
             ),
             content: const Text(
@@ -91,7 +92,7 @@ class _DetailsPageState extends State<DetailsPage> {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             title: Lottie.asset(
-              'animation/like1.json',
+              'assets/animation/like1.json',
               height: 300,
             ),
             content: const Text(
@@ -111,12 +112,16 @@ class _DetailsPageState extends State<DetailsPage> {
                   ),
                 ),
                 onPressed: () {
+                  Fluttertoast.showToast(
+                    msg: "تم ارسال البلاغ👍",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    textColor: Colors.white,
+                    fontSize: 16.0,
+                  );
                   // هنا تم إضافة تعليمات لمسح النص من الـ Controllers
-                  setState(() {
-                    locationController.clear();
-                    deviceController.clear();
-                    problemController.clear();
-                  });
+
                   Navigator.of(context).pop();
                   Navigator.of(context).pop();
                 },
@@ -133,30 +138,31 @@ class _DetailsPageState extends State<DetailsPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-          backgroundColor: Colors.cyan,
-          title: const Text(
-            "تقديم بلاغ",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Cario'),
+        backgroundColor: Colors.cyan,
+        title: const Text(
+          "تقديم بلاغ",
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Cario'),
+        ),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 105, 142, 255),
+                  Color(0xFF00CCFF),
+                ],
+                begin: FractionalOffset(0.0, 0.0),
+                end: FractionalOffset(1.0, 0.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
           ),
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 105, 142, 255),
-                    Color(0xFF00CCFF),
-                  ],
-                  begin: FractionalOffset(0.0, 0.0),
-                  end: FractionalOffset(1.0, 0.0),
-                  stops: [0.0, 1.0],
-                  tileMode: TileMode.clamp),
-            ),
-          ),
-          centerTitle: true,
-          iconTheme: const IconThemeData(color: Colors.white)),
+        ),
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -175,9 +181,8 @@ class _DetailsPageState extends State<DetailsPage> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Lottie.asset(
-                  'animation/p2p.json',
+                  'assets/animation/p2p.json',
                   fit: BoxFit.contain,
-                  height: 160,
                   width: double.infinity,
                 ),
               ),
@@ -200,7 +205,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    buildTextFieldText(
+                    buildTextFieldLocation(
                       locationController,
                       'الموقع',
                       'أدخل اسم المعمل',
@@ -246,7 +251,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 74),
             ],
           ),
         ),

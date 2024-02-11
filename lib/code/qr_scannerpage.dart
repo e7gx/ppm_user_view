@@ -42,7 +42,7 @@ class _QRScannerPageState extends State<QRScannerPage> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
               title: Lottie.asset(
-                'animation/like1.json',
+                'assets/animation/like1.json',
                 height: 300,
               ),
               contentTextStyle:

@@ -181,14 +181,15 @@ class _HomePageState extends State<HomePage> {
                 title: const Text(
                   'تسجيل خروج',
                   style: TextStyle(
-                      color: Color.fromARGB(195, 37, 37, 37),
-                      fontSize: 20, //  تغيير هذه القيمة لتكون الحجم
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Cario'),
+                    color: Color(0xC31C3999),
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Cario',
+                  ),
                 ),
                 leading: Icon(
                   Icons.logout,
-                  size: 30.0,
+                  size: 36.0,
                   color: Colors.blue[800],
                 ),
                 onTap: () {

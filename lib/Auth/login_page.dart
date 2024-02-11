@@ -37,13 +37,14 @@ class LoginPage extends StatelessWidget {
         automaticallyImplyLeading: false,
       ), //Ap
       body: SingleChildScrollView(
+        reverse: true,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Lottie.asset(
-                'animation/ppmana.json', // تأكد من مسار الـ asset الصحيح للتحريك
+                'assets/animation/ppmana.json', // تأكد من مسار الـ asset الصحيح للتحريك
                 width: 500.0,
                 height: 250.0,
               ),
@@ -118,7 +119,7 @@ class LoginPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Lottie.asset(
-                                  'animation/WOR.json'), // يجب أن تكون الصورة موجودة في مجلد الـ assets
+                                  'assets/animation/WOR.json'), // يجب أن تكون الصورة موجودة في مجلد الـ assets
                               const SizedBox(height: 10),
                               const Text(
                                 '       يرجى ملء كل من حقول   \n    البريد الإلكتروني وكلمة المرور   ',
@@ -163,7 +164,7 @@ class LoginPage extends StatelessWidget {
                     String message =
                         '       كلمة المرور او البريد الإلكتروني       \n          غير صحيح حاول مرة اخرى ';
                     String lottieAsset =
-                        'animation/WOR.json'; // مسار ملف تحريك Lottie للخطأ
+                        'assets/animation/WOR.json'; // مسار ملف تحريك Lottie للخطأ
 
                     if (e.code == 'user-not-found') {
                       message = 'لم يتم العثور على المستخدم!';
@@ -171,9 +172,8 @@ class LoginPage extends StatelessWidget {
                       message = 'كلمة المرور غير صحيحة!';
                     }
 
-                    // عرض رسالة الخطأ مع تحريك Lottie
-                    // ignore: use_build_context_synchronously
                     showDialog(
+                      // ignore: use_build_context_synchronously
                       context: context,
                       builder: (context) {
                         return AlertDialog(

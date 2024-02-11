@@ -66,36 +66,38 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         PageViewModel(
           title: "\n من نحن؟",
           body: "نحن طلاب من جامعة ام القرى و نهدف لمساعدة المنشات عبر تطبيقنا",
-          image: Lottie.asset('animation/ppmana.json'),
+          image: Lottie.asset('assets/animation/ppmana.json'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "\n ماذا سنضيف؟ ",
           body:
               "تطبيقنا يبسط إدارة مؤسستك ويزيد من كفائتها مع واجهة سهلة وأدوات متطورة لتحسين الأداء وتوفير الكثير من الوقت",
-          image:
-              Lottie.asset('animation/reports.json', height: 280, width: 500),
+          image: Lottie.asset('assets/animation/reports.json',
+              height: 280, width: 500),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "\nكيف سيؤثر؟",
           body:
               " تطبيقنا يعزز التواصل والتعاون،وايضا يساعد في اتخاذ قرارات أفضل، ويزيد من الكفاءة في إدارة مؤسستك بشكل افضل",
-          image: Lottie.asset('animation/data.json', height: 280, width: 500),
+          image: Lottie.asset('assets/animation/data.json',
+              height: 280, width: 500),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "جرد الاجهزة في المنشاة؟",
           body:
               "جرد الأجهزة يسهل توثيق وتتبع أجهزة مؤسستك لتحقيق إدارة فعّالة وصيانة سهلة",
-          image: Lottie.asset('animation/p2p.json', height: 280, width: 500),
+          image: Lottie.asset('assets/animation/p2p.json',
+              height: 280, width: 500),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "\n!تواصل افضل ",
           body:
               "  تواصل يجمع بين مزايا التواصل الفعّال وسهولة الاستخدام لتحسين التفاهم وتنسيق الجهود لزيادة الانتاجية في مؤسستك",
-          image: Lottie.asset('animation/reportsman.json',
+          image: Lottie.asset('assets/animation/reportsman.json',
               height: 280, width: 500),
           decoration: pageDecoration,
         ),
@@ -103,8 +105,8 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           title: "\n تسجيل الدخول  ",
           body:
               " سجّل دخولك إلى التطبيق \n PPM للاستفادة من التواصل الجيد ومزايا إدارة الممتلكات التقنية",
-          image:
-              Lottie.asset('animation/signup1.json', height: 280, width: 500),
+          image: Lottie.asset('assets/animation/signup1.json',
+              height: 280, width: 500),
           decoration: pageDecoration,
         ),
       ],

@@ -20,10 +20,12 @@ class _SignUpPageState extends State<SignUpPage> {
     final String password = _passwordController.text.trim();
 
     if (email.isEmpty || password.isEmpty) {
-      _showDialog('            يرجى ملء جميع الحقول', 'animation/WOR.json');
+      _showDialog(
+          '            يرجى ملء جميع الحقول', 'assets/animation/WOR.json');
     } else if (!RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
         .hasMatch(email)) {
-      _showDialog('       يرجى إدخال بريد إلكتروني صالح', 'animation/WOR.json');
+      _showDialog(
+          '       يرجى إدخال بريد إلكتروني صالح', 'assets/animation/WOR.json');
     } else {
       try {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -48,7 +50,7 @@ class _SignUpPageState extends State<SignUpPage> {
         }
         if (mounted) {
           // Also check here before showing the dialog
-          _showDialog(errorMessage, 'animation/WOR.json');
+          _showDialog(errorMessage, 'assets/animation/WOR.json');
         }
       }
     }
@@ -115,103 +117,92 @@ class _SignUpPageState extends State<SignUpPage> {
           color: Colors.white,
         ),
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 244, 254, 255),
-              Color.fromARGB(255, 205, 245, 255),
+      body: SingleChildScrollView(
+        reverse: true,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Lottie.asset(
+                'assets/animation/reportsman.json', // Make sure this path is correct
+                width: 400.0,
+                height: 250.0,
+              ),
+              const SizedBox(height: 40.0),
+              TextField(
+                cursorColor: Colors.cyan,
+                controller: _emailController,
+                decoration: const InputDecoration(
+                  labelText: 'البريد الإلكتروني',
+                  labelStyle: TextStyle(
+                      fontFamily: 'Cario',
+                      color: Colors.cyan), // Cyan color for label text
+                  prefixIcon: Icon(Icons.email_outlined,
+                      color: Colors.cyan), // Cyan color for icon
+                  border: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.cyan), // Cyan color for border
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Colors.cyan), // Cyan color for enabled border
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Colors.cyan), // Cyan color for focused border
+                  ),
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              const SizedBox(height: 20.0),
+              TextField(
+                cursorColor: Colors.cyan,
+                controller: _passwordController,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'كلمة المرور',
+                  labelStyle: TextStyle(
+                      fontFamily: 'Cario',
+                      color: Colors.cyan), // Cyan color for label text
+                  prefixIcon: Icon(Icons.lock_outline,
+                      color: Colors.cyan), // Cyan color for icon
+                  border: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.cyan), // Cyan color for border
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Colors.cyan), // Cyan color for enabled border
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Colors.cyan), // Cyan color for focused border
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              ElevatedButton(
+                onPressed: _registerUser,
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 60.0),
+                  backgroundColor: Colors.cyan,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: const Text(
+                  ' تسجيل جديد ',
+                  style: TextStyle(
+                      fontFamily: 'Cario',
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(height: 90.0),
             ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Lottie.asset(
-                  'animation/reportsman.json', // Make sure this path is correct
-                  width: 400.0,
-                  height: 250.0,
-                ),
-                const SizedBox(height: 40.0),
-                TextField(
-                  cursorColor: Colors.cyan,
-                  controller: _emailController,
-                  decoration: const InputDecoration(
-                    labelText: 'البريد الإلكتروني',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Cario',
-                        color: Colors.cyan), // Cyan color for label text
-                    prefixIcon: Icon(Icons.email_outlined,
-                        color: Colors.cyan), // Cyan color for icon
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for border
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for enabled border
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for focused border
-                    ),
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                ),
-                const SizedBox(height: 20.0),
-                TextField(
-                  cursorColor: Colors.cyan,
-                  controller: _passwordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'كلمة المرور',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Cario',
-                        color: Colors.cyan), // Cyan color for label text
-                    prefixIcon: Icon(Icons.lock_outline,
-                        color: Colors.cyan), // Cyan color for icon
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for border
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for enabled border
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.cyan), // Cyan color for focused border
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 40.0),
-                ElevatedButton(
-                  onPressed: _registerUser,
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 60.0),
-                    backgroundColor: Colors.cyan,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                  ),
-                  child: const Text(
-                    ' تسجيل جديد ',
-                    style: TextStyle(
-                        fontFamily: 'Cario',
-                        fontSize: 16.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                const SizedBox(height: 90.0),
-              ],
-            ),
           ),
         ),
       ),
